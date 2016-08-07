@@ -4,13 +4,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
     <services>
-        <service id="noveo_rest.example" class="Noveo\RestBundle\Example">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <service id="noveo_rest.controller.user" class="Noveo\RestBundle\Controller\UserRestController">
+            <call method="setContainer">
+                <argument type="service" id="service_container" />
+            </call>
+        </service>
+        <service id="noveo_rest.controller.group" class="Noveo\RestBundle\Controller\GroupRestController">
+            <call method="setContainer">
+                <argument type="service" id="service_container" />
+            </call>
         </service>
     </services>
-    -->
 </container>

@@ -30,24 +30,6 @@ class UserHandlerTest extends KernelTestCase
     /**
      * @test
      */
-    public function it_should_create_active_user()
-    {
-        $param = [
-            'email' => $this->faker->email,
-            'first_name' => $this->faker->firstName,
-            'last_name' => $this->faker->lastName,
-        ];
-
-        $user = $this->userHandler->createUser($param);
-
-        $this->userHandler->saveUser($user);
-
-        static::assertNotEmpty($user->getId());
-    }
-
-    /**
-     * @test
-     */
     public function it_should_get_users()
     {
         $users = $this->userHandler->all();

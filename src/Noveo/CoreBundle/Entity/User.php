@@ -67,19 +67,10 @@ class User
     private $group;
 
 
-    public static function createActive($email, array $param = null)
+    public static function createActive()
     {
         $user = new static;
         $user->setState(static::STATE_ACTIVE);
-
-        $user->setEmail($email);
-
-        foreach ($param as $paramName => $value) {
-            $setter = 'set' . ucwords(str_replace(array('-', '_'), ' ', $paramName));
-            $setter = str_replace(' ', '', $setter);
-
-            call_user_func([$user, $setter], $value);
-        }
 
         $date = new \DateTime('now', new \DateTimeZone('UTC'));
         $user->setCreationDate($date);

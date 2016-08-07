@@ -15,6 +15,7 @@
     <testsuites>
         <testsuite name="Project Test Suite">
             <directory>src/Noveo/CoreBundle/Tests</directory>
+            <directory>src/Noveo/RestBundle/Tests</directory>
         </testsuite>
     </testsuites>
 

@@ -8,10 +8,12 @@
         <service id="noveo_core.user_handler" class="Noveo\CoreBundle\Handler\UserHandler">
             <argument type="service" id="doctrine.orm.entity_manager" />
             <argument>Noveo\CoreBundle\Entity\User</argument>
+            <argument type="service" id="form.factory" />
         </service>
         <service id="noveo_core.group_handler" class="Noveo\CoreBundle\Handler\GroupHandler">
             <argument type="service" id="doctrine.orm.entity_manager" />
             <argument>Noveo\CoreBundle\Entity\Group</argument>
+            <argument type="service" id="form.factory" />
         </service>
     </services>
 </container>

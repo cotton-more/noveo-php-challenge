@@ -1,8 +1,4 @@
-noveo_core:
-    resource: "@NoveoCoreBundle/Resources/config/routing.xml"
-    prefix:   /
-
 noveo_rest:
-    resource: "@NoveoRestBundle/Resources/config/routing.xml"
-    prefix:   /
-
+    type: rest
+    resource: "@NoveoRestBundle/Resources/config/routing.yml"
+    prefix:   /api/v1

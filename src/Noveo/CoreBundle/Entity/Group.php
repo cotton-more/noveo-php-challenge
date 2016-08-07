@@ -2,6 +2,7 @@
 
 namespace Noveo\CoreBundle\Entity;
 
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -57,7 +58,7 @@ class Group
      *
      * @param string $name
      *
-     * @return Groups
+     * @return Group
      */
     public function setName($name)
     {
@@ -79,11 +80,11 @@ class Group
     /**
      * Add user
      *
-     * @param \Noveo\CoreBundle\Entity\User $user
+     * @param User $user
      *
      * @return Group
      */
-    public function addUser(\Noveo\CoreBundle\Entity\User $user)
+    public function addUser(User $user)
     {
         $this->users[] = $user;
 
@@ -93,9 +94,9 @@ class Group
     /**
      * Remove user
      *
-     * @param \Noveo\CoreBundle\Entity\User $user
+     * @param User $user
      */
-    public function removeUser(\Noveo\CoreBundle\Entity\User $user)
+    public function removeUser(User $user)
     {
         $this->users->removeElement($user);
     }
@@ -103,7 +104,7 @@ class Group
     /**
      * Get users
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @return Collection
      */
     public function getUsers()
     {

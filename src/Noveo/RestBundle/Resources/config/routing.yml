@@ -1,0 +1,34 @@
+noveo_rest_all_user:
+    path: /users/
+    methods: [GET]
+    defaults: { _controller: noveo_rest.controller.user:getUsersAction }
+
+noveo_rest_get_user:
+    path: /users/{id}/
+    methods: [GET]
+    defaults: { _controller: noveo_rest.controller.user:getUserAction }
+
+noveo_rest_create_user:
+    path: /users/
+    methods: [POST]
+    defaults: { _controller: noveo_rest.controller.user:postUserAction }
+
+noveo_rest_patch_user:
+    path: /users/{id}/
+    methods: [PATCH]
+    defaults: { _controller: noveo_rest.controller.user:patchUserAction }
+
+noveo_rest_get_all_groups:
+    path: /groups/
+    method: [GET]
+    defaults: { _controller: noveo_rest.controller.group:getGroupsAction }
+
+noveo_rest_patch_group:
+    path: /groups/{group}/
+    methods: [PATCH]
+    defaults: { _controller: noveo_rest.controller.group:patchGroupAction }
+
+noveo_rest_patch_group_users:
+    path: /groups/{group}/users/
+    methods: [PATCH]
+    defaults: { _controller: noveo_rest.controller.group:patchGroupUsersAction }
